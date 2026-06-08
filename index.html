@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora Build — Алматыда кілтке дейінгі жөндеу</title>
+    <meta name="description" content="Алматыда кілтке дейінгі жөндеу — Velora Build. Техникалық жоба, электрика, сантехника, кернелмелі төбелер, ламинат, санторап өңдеуі. Онлайн құн есептеу.">
+    <meta name="keywords" content="пәтер жөндеу Алматы, кілтке дейінгі жөндеу, электр монтаж, сантехника, кернелмелі төбелер, ламинат, Velora Build">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="#" class="header__logo">
+                <span class="logo__text-fb" style="display:flex">Velora <strong>Build</strong></span>
+            </a>
+            <nav class="header__nav" id="mainNav">
+                <a href="#services"  class="nav__link" onclick="trackEvent('nav_click',{link:'services'})">Қызметтер</a>
+                <a href="#cases"     class="nav__link" onclick="trackEvent('nav_click',{link:'cases'})">Нысандар</a>
+                <a href="#quiz"      class="nav__link" onclick="trackEvent('nav_click',{link:'quiz'})">Есептеу</a>
+                <a href="#packages"  class="nav__link" onclick="trackEvent('nav_click',{link:'packages'})">Пакеттер</a>
+                <a href="#trust"     class="nav__link" onclick="trackEvent('nav_click',{link:'trust'})">Кепілдіктер</a>
+                <a href="#faq"       class="nav__link" onclick="trackEvent('nav_click',{link:'faq'})">Сұрақтар</a>
+                <a href="#contacts"  class="nav__link" onclick="trackEvent('nav_click',{link:'contacts'})">Байланыс</a>
+            </nav>
+            <div class="header__actions">
+                <a href="tel:+77000000000" class="header__phone" onclick="trackEvent('phone_click',{location:'header'})">
+                    +7 700 000 00 00
+                </a>
+                <a href="https://wa.me/77000000000?text=Сәлеметсіз,%20жөндеу%20құнын%20есептегім%20келеді"
+                   class="btn btn--wa btn--sm" target="_blank"
+                   onclick="trackEvent('whatsapp_click',{location:'header'})">
+                    WhatsApp
+                </a>
+                <a href="#quiz" class="btn btn--primary btn--sm"
+                   onclick="trackEvent('hero_cta_click',{location:'header'})">
+                    Құнын есептеу
+                </a>
+            </div>
+            <button class="header__burger" id="burgerBtn" aria-label="Мәзірді ашу" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__inner">
+        <button class="mobile-nav__close" onclick="closeMobileNav()" aria-label="Мәзірді жабу">✕</button>
+        <nav>
+            <a href="#services"  class="mobile-nav__link" onclick="closeMobileNav();trackEvent('nav_click',{link:'services'})">Қызметтер</a>
+            <a href="#cases"     class="mobile-nav__link" onclick="closeMobileNav();trackEvent('nav_click',{link:'cases'})">Нысандар</a>
+            <a href="#quiz"      class="mobile-nav__link" onclick="closeMobileNav();trackEvent('nav_click',{link:'quiz'})">Құн есептеу</a>
+            <a href="#packages"  class="mobile-nav__link" onclick="closeMobileNav();trackEvent('nav_click',{link:'packages'})">Жөндеу пакеттері</a>
+            <a href="#trust"     class="mobile-nav__link" onclick="closeMobileNav();trackEvent('nav_click',{link:'trust'})">Кепілдіктер</a>
+            <a href="#faq"       class="mobile-nav__link" onclick="closeMobileNav();trackEvent('nav_click',{link:'faq'})">Сұрақтар</a>
+            <a href="#contacts"  class="mobile-nav__link" onclick="closeMobileNav();trackEvent('nav_click',{link:'contacts'})">Байланыс</a>
+        </nav>
+        <div class="mobile-nav__footer">
+            <a href="tel:+77000000000" class="mobile-nav__phone" onclick="trackEvent('phone_click',{location:'mobile_nav'})">
+                +7 700 000 00 00
+            </a>
+            <a href="#quiz" class="btn btn--primary btn--full" onclick="closeMobileNav();trackEvent('hero_cta_click',{location:'mobile_nav'})">
+                Құнын есептеу
+            </a>
+        </div>
+    </div>
+</div>
+<div class="mobile-nav__overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+
+<section class="hero" id="hero">
+    <div class="container">
+        <div class="hero__inner">
+            <div class="hero__content">
+                <div class="hero__badge">
+                    <span class="badge__dot"></span>
+                    Velora Build · Алматы
+                </div>
+                <h1 class="hero__title">
+                    Кілтке дейінгі жөндеу —<br>
+                    <span class="text-accent">идеядан</span><br>
+                    дайын интерьерге дейін
+                </h1>
+                <p class="hero__subtitle">
+                    Барлық процесті өз мойнымызға аламыз: техникалық жоба, дизайн-визуализация, сантехника, электрика, кернелмелі төбелер, ламинат, қабырға бояуы, бамбук панельдері, есіктер және санторапты керамогранит пен кафельмен өңдеу.
+                </p>
+                <div class="hero__actions">
+                    <a href="#quiz" class="btn btn--primary btn--lg"
+                       onclick="trackEvent('hero_cta_click',{location:'hero'})">
+                        Құнын есептеу
+                    </a>
+                    <a href="https://wa.me/77000000000?text=Сәлеметсіз,%20жөндеуді%20талқылағым%20келеді"
+                       class="btn btn--wa btn--lg" target="_blank"
+                       onclick="trackEvent('whatsapp_click',{location:'hero'})">
+                        WhatsApp-қа жазу
+                    </a>
+                </div>
+                <p class="hero__microcopy">Сапалы, заманауи және артық мәселесіз.</p>
+
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__num">Алматы</span>
+                        <span class="stat__label">қалада жұмыс жасаймыз</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num">Кілтке дейін</span>
+                        <span class="stat__label">жұмыстардың толық циклі</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num">Шарт</span>
+                        <span class="stat__label">шарттарды бекітеміз</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__num">Смета</span>
+                        <span class="stat__label">жұмыс басталғанға дейін</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__visual">
+                <div class="hero__media">
+                    <div class="media-ph media-ph--hero">
+                        <div class="media-ph__inner">
+                            <span class="media-ph__icon">🏗️</span>
+                            <span class="media-ph__label">Velora Build нысандары</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__insight-card">
+                    <div class="insight-card__emoji">💡</div>
+                    <p>Құнына кіреді: техникалық жоба, дизайн-визуализация, сантехника мен электрика монтажы, кернелмелі төбелер, ламинат, есіктер және санторапты өңдеу. <strong>Барлығы кілтке дейін.</strong></p>
+                </div>
+
+                <div class="hero__object-badge">
+                    <span class="object-badge__tag">Нысан тапсырылды</span>
+                    <span class="object-badge__info">Кілтке дейінгі жөндеу</span>
+                    <span class="object-badge__status">✓ Бюджет старт алдында келісілді</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Біз не істейміз</h2>
+            <p class="section-sub">Жұмыстардың толық циклі — техникалық жобадан және қара дайындықтан таза өңдеуге және инженерияға дейін кілтке дейін.</p>
+        </div>
+        <div class="services__grid">
+            <div class="service-card">
+                <div class="service-card__icon">🔑</div>
+                <h3>Кілтке дейінгі жөндеу</h3>
+                <p>Толық цикл: техникалық жоба, дизайн-визуализация, барлық жұмыс түрлері және нысанды тапсыру.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card__icon">⚡</div>
+                <h3>Электр монтаж жұмыстары</h3>
+                <p>Электр щитін монтаждау, топтарды тарату, кабель жолдары, розеткалар, ажыратқыштар мен жарықтандыру.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card__icon">🚿</div>
+                <h3>Сантехника жұмыстары</h3>
+                <p>Су жабдықтауды тарату, коллектор тораптарын жинақтау, сантехника монтажы және гидроизоляция.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card__icon">🧱</div>
+                <h3>Қара өңдеу</h3>
+                <p>Бұзу, стяжка, сылақ, қабырғаларды теңестіру және беттерді дайындау.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card__icon">✨</div>
+                <h3>Таза өңдеу</h3>
+                <p>Marshal бояуымен қабырға бояуы, бамбук панельдері, керамогранит, ламинат, есіктер мен плинтустар.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-card__icon">🪵</div>
+                <h3>Кернелмелі төбелер</h3>
+                <p>Кернелмелі төбелерді монтаждау, трек жарықтандырысы, споттар мен плафондар кілтке дейін.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pain" id="pain">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Неліктен жөндеу көбіне күтілгеннен қымбатқа шығады?</h2>
+            <p class="section-sub">Бәрі өтірік айтады дегендіктен емес. Жай, бірінші есептеуде ескерілмей қалатын бірнеше сәт болады.</p>
+        </div>
+        <div class="pain__grid">
+            <div class="pain-card">
+                <div class="pain-card__icon">🔨</div>
+                <h3 class="pain-card__title">Бұзу жұмысын ескермеді</h3>
+                <p class="pain-card__text">Ескі жабындар, қабырғалар мен коммуникациялар жиі қосымша жұмыс тудырады, олар бірінші сметада көрінбейді.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-card__icon">⚡</div>
+                <h3 class="pain-card__title">Электриканы ұмытып кетті</h3>
+                <p class="pain-card__text">Розеткалар, щит, жарық топтары мен техника бюджетке айтарлықтай әсер етеді — бірінші сметада бұларды жоғалтып алу оңай.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-card__icon">🧱</div>
+                <h3 class="pain-card__title">Қара материалдарды санамады</h3>
+                <p class="pain-card__text">Сылақ, стяжка, қоспалар мен жеткізу есептен шығып қалады — және жөндеудің ортасында таң қалдырады.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-card__icon">📄</div>
+                <h3 class="pain-card__title">Жазбаша бекіту жоқ</h3>
+                <p class="pain-card__text">Өзгерістер жазбаша келісілмесе, жөндеудің ортасында кім не айтты деген дауластар басталады.</p>
+            </div>
+        </div>
+        <div class="pain__cta">
+            <a href="#quiz" class="btn btn--primary"
+               onclick="trackEvent('hero_cta_click',{location:'pain_block'})">
+                Бюджетімді тексеру
+            </a>
+            <p class="microcopy">Бұзу жұмысынан кейін таң қалғаннан гөрі, ауқымды қазір білген жақсы.</p>
+        </div>
+    </div>
+</section>
+
+<section class="quiz-section" id="quiz">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Жөндеудің алдын ала құнын есептеңіз</h2>
+            <p class="section-sub">5 сұрақ — біз нысаныңыз үшін бағдарлық есеп дайындаймыз.</p>
+        </div>
+
+        <div class="quiz" id="quizWidget">
+
+            <div class="quiz__progress-wrap">
+                <div class="quiz__progress-track">
+                    <div class="quiz__progress-fill" id="quizProgressFill" style="width:20%"></div>
+                </div>
+                <span class="quiz__progress-label" id="quizProgressLabel">Қадам 1 / 5</span>
+            </div>
+
+            <div class="quiz__step active" id="quizStep1" data-step="1">
+                <h3 class="quiz__question">Қандай нысанды жөндеу керек?</h3>
+                <div class="quiz__hint"><span>💬</span> Нысан түрі инженерлік және қара жұмыстар көлеміне әсер етеді.</div>
+                <div class="quiz__options quiz__options--grid">
+                    <button class="quiz__option" data-field="objectType" data-value="Пәтер" onclick="selectOption(this,1)">
+                        <span class="qopt__icon">🏢</span>
+                        <span class="qopt__label">Пәтер</span>
+                    </button>
+                    <button class="quiz__option" data-field="objectType" data-value="Үй" onclick="selectOption(this,1)">
+                        <span class="qopt__icon">🏡</span>
+                        <span class="qopt__label">Үй</span>
+                    </button>
+                    <button class="quiz__option" data-field="objectType" data-value="Коммерциялық үй-жай" onclick="selectOption(this,1)">
+                        <span class="qopt__icon">🏪</span>
+                        <span class="qopt__label">Коммерциялық үй-жай</span>
+                    </button>
+                    <button class="quiz__option" data-field="objectType" data-value="Басқа" onclick="selectOption(this,1)">
+                        <span class="qopt__icon">🔧</span>
+                        <span class="qopt__label">Басқа</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="quiz__step" id="quizStep2" data-step="2">
+                <h3 class="quiz__question">Нысанның ауданы қандай?</h3>
+                <div class="quiz__hint"><span>💬</span> Аудан неғұрлым үлкен болса, м² бойынша бағаны соғұрлым дәл есептеуге болады.</div>
+                <div class="quiz__options quiz__options--grid">
+                    <button class="quiz__option" data-field="area" data-value="40 м²-ге дейін" onclick="selectOption(this,2)">
+                        <span class="qopt__icon">📐</span>
+                        <span class="qopt__label">40 м²-ге дейін</span>
+                    </button>
+                    <button class="quiz__option" data-field="area" data-value="40–70 м²" onclick="selectOption(this,2)">
+                        <span class="qopt__icon">📐</span>
+                        <span class="qopt__label">40–70 м²</span>
+                    </button>
+                    <button class="quiz__option" data-field="area" data-value="70–100 м²" onclick="selectOption(this,2)">
+                        <span class="qopt__icon">📐</span>
+                        <span class="qopt__label">70–100 м²</span>
+                    </button>
+                    <button class="quiz__option" data-field="area" data-value="100+ м²" onclick="selectOption(this,2)">
+                        <span class="qopt__icon">📐</span>
+                        <span class="qopt__label">100+ м²</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="quiz__step" id="quizStep3" data-step="3">
+                <h3 class="quiz__question">Қандай жөндеу форматы керек?</h3>
+                <div class="quiz__hint"><span>💬</span> Нақты білмесеңіз — «Кеңес керек» деп таңдаңыз, біз түсінуге көмектесеміз.</div>
+                <div class="quiz__options quiz__options--grid">
+                    <button class="quiz__option" data-field="repairType" data-value="Кілтке дейінгі жөндеу" onclick="selectOption(this,3)">
+                        <span class="qopt__icon">🔑</span>
+                        <span class="qopt__label">Кілтке дейінгі жөндеу</span>
+                    </button>
+                    <button class="quiz__option" data-field="repairType" data-value="Комфорт пакеті" onclick="selectOption(this,3)">
+                        <span class="qopt__icon">🏠</span>
+                        <span class="qopt__label">Комфорт пакеті</span>
+                    </button>
+                    <button class="quiz__option" data-field="repairType" data-value="Престиж пакеті" onclick="selectOption(this,3)">
+                        <span class="qopt__icon">⭐</span>
+                        <span class="qopt__label">Престиж пакеті</span>
+                    </button>
+                    <button class="quiz__option" data-field="repairType" data-value="Тек қара жұмыстар" onclick="selectOption(this,3)">
+                        <span class="qopt__icon">🧱</span>
+                        <span class="qopt__label">Тек қара жұмыстар</span>
+                    </button>
+                    <button class="quiz__option" data-field="repairType" data-value="Тек таза өңдеу" onclick="selectOption(this,3)">
+                        <span class="qopt__icon">✨</span>
+                        <span class="qopt__label">Тек таза өңдеу</span>
+                    </button>
+                    <button class="quiz__option" data-field="repairType" data-value="Кеңес керек" onclick="selectOption(this,3)">
+                        <span class="qopt__icon">💬</span>
+                        <span class="qopt__label">Кеңес керек</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="quiz__step" id="quizStep4" data-step="4">
+                <h3 class="quiz__question">Қандай жұмыстар маңызды?</h3>
+                <div class="quiz__hint"><span>💬</span> Ең басымды бағытты таңдаңыз — бұл есепті дәлірек дайындауға көмектеседі.</div>
+                <div class="quiz__options quiz__options--grid">
+                    <button class="quiz__option" data-field="workPriority" data-value="Электрика" onclick="selectOption(this,4)">
+                        <span class="qopt__icon">⚡</span>
+                        <span class="qopt__label">Электрика</span>
+                    </button>
+                    <button class="quiz__option" data-field="workPriority" data-value="Сантехника" onclick="selectOption(this,4)">
+                        <span class="qopt__icon">🚿</span>
+                        <span class="qopt__label">Сантехника</span>
+                    </button>
+                    <button class="quiz__option" data-field="workPriority" data-value="Санторап" onclick="selectOption(this,4)">
+                        <span class="qopt__icon">🛁</span>
+                        <span class="qopt__label">Санторап</span>
+                    </button>
+                    <button class="quiz__option" data-field="workPriority" data-value="Төбелер" onclick="selectOption(this,4)">
+                        <span class="qopt__icon">🏠</span>
+                        <span class="qopt__label">Төбелер</span>
+                    </button>
+                    <button class="quiz__option" data-field="workPriority" data-value="Ламинат" onclick="selectOption(this,4)">
+                        <span class="qopt__icon">🪵</span>
+                        <span class="qopt__label">Ламинат</span>
+                    </button>
+                    <button class="quiz__option" data-field="workPriority" data-value="Қабырға бояуы" onclick="selectOption(this,4)">
+                        <span class="qopt__icon">🎨</span>
+                        <span class="qopt__label">Қабырға бояуы</span>
+                    </button>
+                    <button class="quiz__option" data-field="workPriority" data-value="Есіктер" onclick="selectOption(this,4)">
+                        <span class="qopt__icon">🚪</span>
+                        <span class="qopt__label">Есіктер</span>
+                    </button>
+                    <button class="quiz__option" data-field="workPriority" data-value="Барлығы кілтке дейін" onclick="selectOption(this,4)">
+                        <span class="qopt__icon">🔑</span>
+                        <span class="qopt__label">Барлығы кілтке дейін</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="quiz__step" id="quizStep5" data-step="5">
+                <h3 class="quiz__question">Қашан бастағыңыз келеді?</h3>
+                <div class="quiz__hint"><span>💬</span> Тек бюджет есептеп жатсаңыз — бұл қалыпты жағдай.</div>
+                <div class="quiz__options quiz__options--grid">
+                    <button class="quiz__option" data-field="startTime" data-value="Шұғыл" onclick="selectOption(this,5)">
+                        <span class="qopt__icon">🚀</span>
+                        <span class="qopt__label">Шұғыл</span>
+                    </button>
+                    <button class="quiz__option" data-field="startTime" data-value="Бір ай ішінде" onclick="selectOption(this,5)">
+                        <span class="qopt__icon">📅</span>
+                        <span class="qopt__label">Бір ай ішінде</span>
+                    </button>
+                    <button class="quiz__option" data-field="startTime" data-value="1–3 айдан кейін" onclick="selectOption(this,5)">
+                        <span class="qopt__icon">🗓️</span>
+                        <span class="qopt__label">1–3 айдан кейін</span>
+                    </button>
+                    <button class="quiz__option" data-field="startTime" data-value="Тек бюджет есептеймін" onclick="selectOption(this,5)">
+                        <span class="qopt__icon">🧮</span>
+                        <span class="qopt__label">Тек бюджет есептеймін</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="quiz__step" id="quizSummary">
+                <div class="quiz__summary-screen">
+                    <div class="summary__emoji">🎯</div>
+                    <h3>Сіздің алдын ала есебіңіз дайын болуда</h3>
+                    <p>Жауаптарыңызға сүйене отырып, бюджеттің бағдарлық ауқымы мен жұмыстар тізімін дайындаймыз. Байланыс мәліметтерін енгізіңіз — есепті WhatsApp-қа жіберейік.</p>
+                    <div class="summary__answers" id="summaryAnswers"></div>
+                    <button class="btn btn--primary btn--lg btn--full" onclick="showQuizForm()">
+                        Есепті алу →
+                    </button>
+                </div>
+            </div>
+
+            <div class="quiz__step" id="quizFormStep">
+                <h3 class="quiz__question">Есепті қайда жіберу?</h3>
+                <p class="quiz__subtext">Velora Build маманы сізбен іс жөнінде хабарласады.</p>
+                <form class="quiz__lead-form" id="quizLeadForm" onsubmit="submitQuizForm(event)" novalidate>
+                    <div class="form-group">
+                        <label for="quizName">Есіміңіз</label>
+                        <input type="text" id="quizName" name="name" placeholder="Сізді қалай атайды?" autocomplete="name">
+                        <span class="form-error" id="quizNameError">Есімді енгізіңіз</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="quizPhone">WhatsApp / телефон</label>
+                        <input type="tel" id="quizPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+                        <span class="form-error" id="quizPhoneError">Дұрыс нөмір енгізіңіз (кем дегенде 10 сан)</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="quizComment">Пікір <span style="font-weight:400;color:var(--clr-text-3)">(міндетті емес)</span></label>
+                        <textarea id="quizComment" name="comment" rows="3" placeholder="Нысан, тілектер немесе сұрақтар туралы айтыңыз..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--lg btn--full btn--wa-cta">
+                        Есепті WhatsApp-та алу
+                    </button>
+                    <p class="form-microcopy">10 рет қоңырау шалмаймыз. Іс жөнінде жазамыз.</p>
+                </form>
+            </div>
+
+            <div class="quiz__step" id="quizSuccess">
+                <div class="quiz__success-screen">
+                    <div class="success__icon">✅</div>
+                    <h3>Өтінім қабылданды!</h3>
+                    <p>Рахмет! Velora Build маманы есеп үшін сізбен хабарласады.</p>
+                    <a href="https://wa.me/77000000000?text=Сәлеметсіз,%20жөндеу%20есебіне%20өтінім%20қалдырдым"
+                       class="btn btn--wa btn--lg" target="_blank"
+                       onclick="trackEvent('whatsapp_click',{location:'quiz_success'})">
+                        WhatsApp-қа жазу
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="benefits" id="benefits">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Есептеуден кейін не аласыз</h2>
+            <p class="section-sub">Біз тек нөмір сұрамаймыз. Адамға нақты келесі қадамды береміз.</p>
+        </div>
+        <div class="benefits__grid">
+            <div class="benefit-card">
+                <div class="benefit-card__num">01</div>
+                <h3>Алдын ала смета</h3>
+                <p>Замерге дейін бюджеттің шамасын түсіну — таңсыртатын болмасын үшін.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__num">02</div>
+                <h3>Пакеттер бойынша ауқым</h3>
+                <p>Комфорт және Престиж пакеттерін салыстыру — бюджет пен күтімге сай таңдаңыз.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__num">03</div>
+                <h3>Жасырын шығындар тізімі</h3>
+                <p>Нені қымбаттата алатынын көрсетеміз — бұзу, коммуникациялар, жеткізу.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__num">04</div>
+                <h3>Мерзімдерді бағалау</h3>
+                <p>Жұмыс көлеміне байланысты жөндеу ұзақтығы бойынша бағыттаймыз.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-card__num">05</div>
+                <h3>Үнемдеу бойынша ұсыныстар</h3>
+                <p>Бюджетті қайда қысқартуға болатынын, ал қайда тәуекел жасамаған дұрыс екенін — адал және қысымсыз айтамыз.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gallery" id="cases">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Дайын нәтижелер</h2>
+            <p class="section-sub">Нысандарды тапсыру барысында түсірдік — тұрғын бөлмелер, дәліздер, санторабтар, өңдеу бөлшектері.</p>
+        </div>
+        <div class="gallery__featured">
+            <div class="gallery-item gallery-item--large">
+                <div class="media-ph media-ph--gallery">
+                    <div class="media-ph__inner">
+                        <span class="media-ph__icon">🏠</span>
+                        <span class="media-ph__label">Дайын интерьер</span>
+                    </div>
+                </div>
+                <span class="gallery-item__label">Дайын интерьер</span>
+            </div>
+            <div class="gallery-item gallery-item--large">
+                <div class="media-ph media-ph--gallery">
+                    <div class="media-ph__inner">
+                        <span class="media-ph__icon">🪵</span>
+                        <span class="media-ph__label">Қабырға панельдері</span>
+                    </div>
+                </div>
+                <span class="gallery-item__label">Қабырға панельдері</span>
+            </div>
+        </div>
+        <div class="gallery__grid">
+            <div class="gallery-item">
+                <div class="media-ph media-ph--gallery-sm">
+                    <div class="media-ph__inner">
+                        <span class="media-ph__icon">🛋️</span>
+                        <span class="media-ph__label">Қонақ бөлмесі</span>
+                    </div>
+                </div>
+                <span class="gallery-item__label">Қабырға панельдері</span>
+            </div>
+            <div class="gallery-item">
+                <div class="media-ph media-ph--gallery-sm">
+                    <div class="media-ph__inner">
+                        <span class="media-ph__icon">🚿</span>
+                        <span class="media-ph__label">Санторап</span>
+                    </div>
+                </div>
+                <span class="gallery-item__label">Санторап кілтке дейін</span>
+            </div>
+            <div class="gallery-item">
+                <div class="media-ph media-ph--gallery-sm">
+                    <div class="media-ph__inner">
+                        <span class="media-ph__icon">🎨</span>
+                        <span class="media-ph__label">Бояу және панельдер</span>
+                    </div>
+                </div>
+                <span class="gallery-item__label">Қабырға бояуы мен сәндік панельдер</span>
+            </div>
+            <div class="gallery-item">
+                <div class="media-ph media-ph--gallery-sm">
+                    <div class="media-ph__inner">
+                        <span class="media-ph__icon">💡</span>
+                        <span class="media-ph__label">Жарықтандыру</span>
+                    </div>
+                </div>
+                <span class="gallery-item__label">Қабырға бояуы мен сәндік панельдер</span>
+            </div>
+            <div class="gallery-item">
+                <div class="media-ph media-ph--gallery-sm">
+                    <div class="media-ph__inner">
+                        <span class="media-ph__icon">🏗️</span>
+                        <span class="media-ph__label">Төбелер мен жарық</span>
+                    </div>
+                </div>
+                <span class="gallery-item__label">Жарықтандыру мен төбелер</span>
+            </div>
+        </div>
+        <div class="gallery__cta">
+            <a href="#quiz" class="btn btn--primary"
+               onclick="trackEvent('hero_cta_click',{location:'gallery'})">
+                Жөндеу құнын есептеу
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="engineering" id="engineering">
+    <div class="container">
+        <div class="engineering__inner">
+            <div class="engineering__text">
+                <h2 class="section-title">Инженерлік жұмыстар — ұзақ жөндеудің негізі</h2>
+                <p class="section-sub">Сантехниканы мұқият таратамыз, коллектор тораптарын жинаймыз, электр щитін монтаждаймыз, кабель жолдарын саламыз және түсінікті таңбалау қалдырамыз.</p>
+                <ul class="engineering__list">
+                    <li>
+                        <span class="engineering__list-icon">🔧</span>
+                        <span>Коллектор тораптарын жинақтау және су жабдықтауды тарату (Deniz құбырлар)</span>
+                    </li>
+                    <li>
+                        <span class="engineering__list-icon">⚡</span>
+                        <span>Электр щитін монтаждау және кабель жолдарын тарту (ВВГ ГОСТ кабель)</span>
+                    </li>
+                    <li>
+                        <span class="engineering__list-icon">📋</span>
+                        <span>Жасырын коммуникацияларды таңбалау және құжаттандыру</span>
+                    </li>
+                </ul>
+                <a href="#quiz" class="btn btn--primary"
+                   onclick="trackEvent('hero_cta_click',{location:'engineering'})">
+                    Құнын есептеу
+                </a>
+            </div>
+            <div class="engineering__photos">
+                <div class="img-ph eng-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">🔧</span><span class="img-ph__label">Сантехника тораптары</span></div>
+                </div>
+                <div class="img-ph eng-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">💧</span><span class="img-ph__label">Су жабдықтау тарату</span></div>
+                </div>
+                <div class="img-ph eng-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">🔩</span><span class="img-ph__label">Коллектор монтажы</span></div>
+                </div>
+                <div class="img-ph eng-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">⚡</span><span class="img-ph__label">Электр монтаж</span></div>
+                </div>
+                <div class="img-ph eng-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">🔌</span><span class="img-ph__label">Щит пен кабель жолдары</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rough" id="rough">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Қара кезең: сапаны қалыптастырамыз</h2>
+            <p class="section-sub">Қара кезеңде бүкіл жөндеудің сапасы қалыптасады — электрика, сантехника, қабырғаларды дайындау, стяжка және техникалық шешімдер.</p>
+        </div>
+        <div class="rough__grid">
+            <div class="rough__photo-wrap">
+                <div class="img-ph rough-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">⚡</span><span class="img-ph__label">Қабырғадағы қара электрика</span></div>
+                </div>
+            </div>
+            <div class="rough__photo-wrap">
+                <div class="img-ph rough-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">🔌</span><span class="img-ph__label">Электрика тарату</span></div>
+                </div>
+            </div>
+            <div class="rough__photo-wrap">
+                <div class="img-ph rough-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">🚪</span><span class="img-ph__label">Кіреберіс аймағы</span></div>
+                </div>
+            </div>
+            <div class="rough__photo-wrap">
+                <div class="img-ph rough-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">🪟</span><span class="img-ph__label">Терезе аймағы</span></div>
+                </div>
+            </div>
+            <div class="rough__photo-wrap rough__photo-wrap--wide">
+                <div class="img-ph rough-photo">
+                    <div class="img-ph__inner"><span class="img-ph__icon">🏗️</span><span class="img-ph__label">Төбе аймағы</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="estimate" id="estimate">
+    <div class="container">
+        <div class="estimate__inner">
+            <div class="estimate__content">
+                <h2 class="section-title">Жөндеу құны неден тұрады</h2>
+                <p class="section-sub">Қорытынды есеп нысанның ауданын, жай-күйін және таңдалған жөндеу пакетін нақтылағаннан кейін дайындалады.</p>
+                <div class="estimate__list">
+                    <div class="est-item">
+                        <span class="est-item__icon">🔨</span>
+                        <div>
+                            <strong>Бұзу</strong>
+                            <span>Ескі жабындарды, қалқаларды, коммуникацияларды алу</span>
+                        </div>
+                    </div>
+                    <div class="est-item">
+                        <span class="est-item__icon">🧱</span>
+                        <div>
+                            <strong>Қара жұмыстар</strong>
+                            <span>Сылақ, стяжка, беттерді теңестіру</span>
+                        </div>
+                    </div>
+                    <div class="est-item">
+                        <span class="est-item__icon">⚡</span>
+                        <div>
+                            <strong>Электрика</strong>
+                            <span>Щит, тарату, Viko розеткалары, жарықтандыру</span>
+                        </div>
+                    </div>
+                    <div class="est-item">
+                        <span class="est-item__icon">🚿</span>
+                        <div>
+                            <strong>Сантехника</strong>
+                            <span>Deniz құбырлары, тарату, сантехника орнату</span>
+                        </div>
+                    </div>
+                    <div class="est-item">
+                        <span class="est-item__icon">🎨</span>
+                        <div>
+                            <strong>Таза өңдеу</strong>
+                            <span>Marshal бояуы, 32 кл ламинат, 60×60 керамогранит, есіктер</span>
+                        </div>
+                    </div>
+                    <div class="est-item">
+                        <span class="est-item__icon">🏠</span>
+                        <div>
+                            <strong>Кернелмелі төбелер</strong>
+                            <span>Кенеп монтажы, трек жарықтандырысы, споттар</span>
+                        </div>
+                    </div>
+                    <div class="est-item">
+                        <span class="est-item__icon">🚛</span>
+                        <div>
+                            <strong>Сатып алу, жеткізу және шығарып тастау</strong>
+                            <span>Материалдарды жеткізу және көтеру, қоқысты шығару</span>
+                        </div>
+                    </div>
+                    <div class="est-item est-item--warning">
+                        <span class="est-item__icon">⚠️</span>
+                        <div>
+                            <strong>Күтпеген жағдайлар</strong>
+                            <span>Барысында анықталуы мүмкін жасырын мәселелер</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#quiz" class="btn btn--primary"
+                   onclick="trackEvent('hero_cta_click',{location:'estimate_block'})">
+                    Бюджетімді түсіну
+                </a>
+            </div>
+
+            <div class="estimate__doc">
+                <div class="ph--doc">
+                    <div class="ph-doc__header">
+                        <div class="ph-doc__logo">VB</div>
+                        <div>
+                            <div class="ph-doc__title">Алдын ала смета</div>
+                            <div class="ph-doc__sub">Пәтер 60 м² · Комфорт пакеті</div>
+                        </div>
+                    </div>
+                    <div class="ph-doc__rows">
+                        <div class="ph-doc__row"><span>Бұзу</span><span>150 000 тг</span></div>
+                        <div class="ph-doc__row"><span>Қара жұмыстар</span><span>380 000 тг</span></div>
+                        <div class="ph-doc__row"><span>Электрика</span><span>220 000 тг</span></div>
+                        <div class="ph-doc__row"><span>Сантехника</span><span>180 000 тг</span></div>
+                        <div class="ph-doc__row"><span>Таза жұмыстар</span><span>620 000 тг</span></div>
+                        <div class="ph-doc__row ph-doc__row--total"><span>Барлығы бастап</span><span>1 550 000 тг</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="payment-stages" id="process">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Жұмыс және төлем кезеңдері</h2>
+            <p class="section-sub">Төлем төрт бөлікке бөлінген — сіз тек әр кезеңде шынайы орындалған жұмыстар үшін төлейсіз.</p>
+        </div>
+        <div class="stages__grid">
+            <div class="stage-card">
+                <div class="stage-card__pct">40%</div>
+                <div class="stage-card__num">КЕЗЕҢ 01</div>
+                <h3>Старт және шарт</h3>
+                <p>Жұмыс көлемін келісіп, шартқа қол қойғаннан кейінгі бірінші төлем. Сметаны және мерзімдерді бекітеміз.</p>
+            </div>
+            <div class="stage-card stage-card--accent">
+                <div class="stage-card__pct">30%</div>
+                <div class="stage-card__num">КЕЗЕҢ 02</div>
+                <h3>Қара жұмыстар</h3>
+                <p>Бұзу, электр монтаж жұмыстары, стяжка және қара сантехникадан кейін.</p>
+            </div>
+            <div class="stage-card">
+                <div class="stage-card__pct">20%</div>
+                <div class="stage-card__num">КЕЗЕҢ 03</div>
+                <h3>Таза өңдеу</h3>
+                <p>Ламинатты жатқызу, қабырғаларды бояу, есіктерді орнату, керамогранит пен шпатлевкадан кейін.</p>
+            </div>
+            <div class="stage-card">
+                <div class="stage-card__pct">10%</div>
+                <div class="stage-card__num">КЕЗЕҢ 04</div>
+                <h3>Қорытынды тапсыру</h3>
+                <p>Тапсырыс берушімен қорытынды нәтижені тексеріп, келіскеннен кейін. Қабылдау актісіне қол қоямыз.</p>
+            </div>
+        </div>
+        <div class="stages__note">
+            <p>Кезең сайын фото мен видео есептер. Барлық өзгерістер жазбаша келісіледі.</p>
+            <a href="#quiz" class="btn btn--outline btn--sm"
+               onclick="trackEvent('payment_terms_view',{})">
+                Төлем шарттарын қарау →
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="packages" id="packages">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Жөндеу пакеттері</h2>
+            <p class="section-sub">Дайын пакет таңдаңыз немесе өз форматыңызды белгілеңіз — нысаныңыз үшін есеп дайындаймыз.</p>
+        </div>
+        <div class="packages__grid">
+
+            <div class="package-card">
+                <div class="package-card__head">
+                    <div class="package-card__name">Комфорт</div>
+                    <p class="package-card__desc">Жақсартылған өңдеу деңгейін, жұмыстардың нақты құрамын және артық шығынсыз ыңғайлы жөндеуді қалайтындарға арналған.</p>
+                </div>
+                <div class="package-card__body">
+                    <h4 class="package-card__list-title">Кіреді:</h4>
+                    <ul class="package-card__list">
+                        <li>Келісім бойынша бұзу жұмыстары</li>
+                        <li>Қалқалар</li>
+                        <li>Электр монтаж жұмыстары</li>
+                        <li>Сантехника жұмыстары</li>
+                        <li>Қабырға мен еденді теңестіру</li>
+                        <li>Кернелмелі төбе</li>
+                        <li>Галтель мен плинтустар</li>
+                        <li>Қабырға бояуы</li>
+                        <li>Ламинат жатқызу</li>
+                        <li>Кафель жатқызу</li>
+                        <li>Бөлме аралық есіктерді орнату</li>
+                        <li>Розетка мен ажыратқыштарды қосу</li>
+                        <li>Сантехниканы қосу</li>
+                        <li>Материалдарды сатып алу, жеткізу және көтеру</li>
+                        <li>Қоқысты шығарып тастау</li>
+                        <li>Жөндеуден кейін ылғалды тазалау</li>
+                    </ul>
+                    <div class="package-card__bonus">
+                        <div class="package-card__bonus-title">🎁 Бонустар</div>
+                        <ul class="package-card__bonus-list">
+                            <li>Реттегіші бар электрлік жылы еден 2 аймаққа</li>
+                            <li>Техникалық дизайн-жоба</li>
+                            <li>Жиһазсыз 1 TV-аймақ</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="package-card__actions">
+                    <a href="/public/pdfs/comfort-package.pdf" download class="btn btn--primary btn--full"
+                       onclick="trackEvent('pdf_download',{package:'comfort'})">
+                        ⬇ Комфорт пакетін жүктеу
+                    </a>
+                    <a href="#quiz" class="btn btn--outline btn--full"
+                       onclick="trackEvent('hero_cta_click',{location:'package_comfort'})">
+                        Құнын есептеу
+                    </a>
+                </div>
+            </div>
+
+            <div class="package-card package-card--prestige">
+                <div class="package-card__badge">Премиум</div>
+                <div class="package-card__head">
+                    <div class="package-card__name">Престиж</div>
+                    <p class="package-card__desc">Тексерілген материалдармен заманауи жөндеуді және нақты комплектацияны қалайтындарға арналған.</p>
+                </div>
+                <div class="package-card__body">
+                    <h4 class="package-card__list-title">Кіреді:</h4>
+                    <ul class="package-card__list">
+                        <li>Knauf ГКЛ немесе газоблоктан қалқалар</li>
+                        <li>ВВГ ГОСТ электрикасы</li>
+                        <li>Deniz сантехника құбырлары</li>
+                        <li>Ванна бөлмесін гидроизоляциялау</li>
+                        <li>Таза материалдар</li>
+                        <li>Marshal бояуы</li>
+                        <li>Viko розеткалары мен ажыратқыштары</li>
+                        <li>32 класс 8 мм ламинат</li>
+                        <li>Полиуретан плинтус</li>
+                        <li>Кернелмелі төбе</li>
+                        <li>Жарықтандыру: споттар, трек, плафондар</li>
+                        <li>Бөлме аралық есіктер</li>
+                        <li>Ванна, унитаз, кран-шүмектер</li>
+                        <li>60×60 керамогранит</li>
+                        <li>Құрылыс қоқысын шығару</li>
+                        <li>Жөндеуден кейін тазалау</li>
+                    </ul>
+                    <div class="package-card__bonus">
+                        <div class="package-card__bonus-title">🎁 Бонус</div>
+                        <ul class="package-card__bonus-list">
+                            <li>Реттегіші бар электрлік жылы еден 1 аймаққа</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="package-card__actions">
+                    <a href="/public/pdfs/prestige-package.pdf" download class="btn btn--primary btn--full"
+                       onclick="trackEvent('pdf_download',{package:'prestige'})">
+                        ⬇ Престиж пакетін жүктеу
+                    </a>
+                    <a href="#quiz" class="btn btn--outline btn--full"
+                       onclick="trackEvent('hero_cta_click',{location:'package_prestige'})">
+                        Құнын есептеу
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="trust" id="trust">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Неліктен Velora Build таңдайды</h2>
+            <p class="section-sub">Жөндеудің логикасын клиентке алдын ала көрсетеміз: бюджет неден тұратынын, алдағы кезеңдер қандай болатынын және старт алдында қандай шешімдер қабылдаған дұрыс екенін.</p>
+        </div>
+        <div class="trust__grid">
+            <div class="trust-card">
+                <div class="trust-card__icon">📋</div>
+                <h3>Кезеңдеп жұмыс жасаймыз</h3>
+                <p>Әр кезең шартта бекітіледі. Тек орындалған жұмыстар үшін төлем — барлығына алдын ала аванс жоқ.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-card__icon">💬</div>
+                <h3>Түсінікті төлем</h3>
+                <p>40% — старт, 30% — қара жұмыстар, 20% — таза өңдеу, 10% — тапсыру. Таңсыртқысыз мөлдір құрылым.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-card__icon">📱</div>
+                <h3>Фото мен видео есептер</h3>
+                <p>Нысаннан фото мен видеоны жүйелі жіберіп тұрамыз, жұмыстардың барысын көруіңіз үшін.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-card__icon">🔧</div>
+                <h3>Инженерлік жұмыстар мұқият орындалады</h3>
+                <p>Электрика ВВГ ГОСТ, Deniz құбырлары, жасырын жолдарды таңбалау және құжаттандыру.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-card__icon">🪜</div>
+                <h3>Нақты кезектілік</h3>
+                <p>Кезеңдердің қатаң тәртібі: алдымен қара және инженерлік жұмыстар, содан кейін таза өңдеу.</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-card__icon">🧮</div>
+                <h3>Онлайн есеп</h3>
+                <p>5 сұраққа жауап беріп, кез келген жұмыс басталмай тұрып бюджеттің алдын ала ауқымын алыңыз.</p>
+            </div>
+        </div>
+        <div class="trust__cta">
+            <a href="#quiz" class="btn btn--primary"
+               onclick="trackEvent('hero_cta_click',{location:'trust_block'})">
+                Сметаны есептеу
+            </a>
+            <p class="microcopy">Бірнеше сұраққа жауап беріңіз — бюджет бойынша алдын ала бағыт дайындаймыз.</p>
+        </div>
+    </div>
+</section>
+
+<section class="savings" id="savings">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Қайда үнемдеуге болады, қайда тәуекел жасамаған дұрыс</h2>
+            <p class="section-sub">Жөндеуде үнемдеу қалыпты жағдай. Мәселе қайта жасауды қымбатқа түсіретін нәрседен үнемдегенде туындайды.</p>
+        </div>
+        <div class="savings__cols">
+            <div class="savings-col savings-col--yes">
+                <div class="savings-col__head">
+                    <span class="savings-col__icon">✅</span>
+                    <h3>Үнемдеуге болады</h3>
+                </div>
+                <ul class="savings-list">
+                    <li>
+                        <span>🪴</span>
+                        <div>
+                            <strong>Сәндік элементтер</strong>
+                            <p>Лепнина, декор, стандартты емес шешімдер — олардың болмауы интерьерді нашарлатпайды.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>🎨</span>
+                        <div>
+                            <strong>Таза материалдардың бір бөлігі</strong>
+                            <p>Ақылға қонымды бағамен сапалы аналогтарды таңдауға болады.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>🛋️</span>
+                        <div>
+                            <strong>Бірінші кезеңде жиһаз</strong>
+                            <p>Аздаған жиһазбен қоныс аулап, кейін толықтыруға болады.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>🖼️</span>
+                        <div>
+                            <strong>Күрделі дизайнерлік шешімдер</strong>
+                            <p>Доғалар, ойықтар, акцентті қабырғалар — кейінге қалдыруға немесе жеңілдетуге болады.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="savings-col savings-col--no">
+                <div class="savings-col__head">
+                    <span class="savings-col__icon">⚠️</span>
+                    <h3>Үнемдемеген дұрыс</h3>
+                </div>
+                <ul class="savings-list">
+                    <li>
+                        <span>⚡</span>
+                        <div>
+                            <strong>Электрика</strong>
+                            <p>Нашар тарату — бұл тек ыңғайсыздық емес. Бір жылдан кейін қайта жасау тәуекелі.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>🚿</span>
+                        <div>
+                            <strong>Сантехника</strong>
+                            <p>Ағу тек сізде ғана емес, төменгі іргелесте де жөндеу талап етеді.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>💧</span>
+                        <div>
+                            <strong>Гидроизоляция</strong>
+                            <p>Ванна бөлмесі мен балконда — онсыз барлық жұмыс бекер кетуі мүмкін.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>🧱</span>
+                        <div>
+                            <strong>Қара жұмыстар</strong>
+                            <p>Қисық негіздерде тіпті қымбат кафель нашар көрінеді және ұзақ ұстамайды.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>👷</span>
+                        <div>
+                            <strong>Тәжірибелі шеберлер</strong>
+                            <p>Арзан бригада бірінші реттен жақсы шебер жалдаудан қымбатқа түсуі мүмкін.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="savings__cta">
+            <a href="#quiz" class="btn btn--primary"
+               onclick="trackEvent('hero_cta_click',{location:'savings_block'})">
+                Бюджет бойынша ұсыныстар алу
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="reviews" id="reviews">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Клиенттер пікірлері</h2>
+        </div>
+        <div class="reviews__grid">
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar review-avatar--a">А</div>
+                    <div class="review-info">
+                        <div class="review-name">Алексей М.</div>
+                        <div class="review-meta">Жаңа үйдегі пәтер · Комфорт пакеті</div>
+                    </div>
+                </div>
+                <p class="review-text">«Жұмыс басталмас бұрын жөндеудің шамалы бюджетін түсіну керек болды. Команда сметаның неден тұратынын, қайда үнемдеуге болатынын, ал қайда тәуекел жасамаған дұрыс екенін тыныш түсіндірді. Барлығы алдын ала және қысыммен емес талқыланғаны ерекше ұнады.»</p>
+            </div>
+
+            <div class="review-card review-card--featured">
+                <div class="review-header">
+                    <div class="review-avatar review-avatar--e">Д</div>
+                    <div class="review-info">
+                        <div class="review-name">Динара К.</div>
+                        <div class="review-meta">Пәтерді күрделі жөндеу · Престиж пакеті</div>
+                    </div>
+                </div>
+                <p class="review-text">«Ең көп алаңдаған нәрсем — барысында баға өсіп кетеді деп ойладым. Есептеуден кейін қандай жұмыстар міндетті, ал қайсысын келесі кезеңге қалдыруға болатыны нақтылана түсті. Бұл тәсіл хаоссыз шешім қабылдауға көмектесті.»</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar review-avatar--m">М</div>
+                    <div class="review-info">
+                        <div class="review-name">Марат Б.</div>
+                        <div class="review-meta">Кілтке дейінгі жөндеу</div>
+                    </div>
+                </div>
+                <p class="review-text">«Қысқа есептен өтіп, бюджет бойынша бағыт алу өте ыңғайлы. Бірден қоңырау шалып барлығын нөлден түсіндіру шарт емес — негізгі деректер менеджерге жеткізіледі.»</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="team" id="team">
+    <div class="container">
+        <div class="team__inner">
+            <h2 class="team__title">Жөндеуді жарнамадағы бригада емес, нақты адамдар жасайды</h2>
+            <p class="team__text">Біз «шусыз және шаңсыз» жөндеуді уәде бермейміз. Жөндеу — бұл әрқашан процесс.
+            Біздің міндетіміз — оны түсінікті ету: бюджет, мерзімдер, кезеңдер мен жауапкершілік бойынша.</p>
+            <p class="team__text">Әр нысан артында нақты прораб тұрады, ол сапа мен мерзімге жауапты.
+            Тек «компания» емес, жөндеудің стресс екенін түсінетін және оны азайтуға тырысатын тірі адамдар.</p>
+            <blockquote class="team__quote">
+                «Ең жақсы жөндеу — клиент не болып жатқанын түсінетін жөндеу.»
+            </blockquote>
+            <div class="team__cta">
+                <a href="https://wa.me/77000000000?text=Сәлеметсіз,%20жөндеуді%20талқылағым%20келеді"
+                   class="btn btn--wa" target="_blank"
+                   onclick="trackEvent('whatsapp_click',{location:'team_block'})">
+                    Танысып, тапсырманы талқылау
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Клиенттер жиі сұрайды — шынайы сөздермен жауап береміз</h2>
+        </div>
+        <div class="faq__list">
+            <div class="faq-item" onclick="toggleFaq(this);trackEvent('faq_open',{q:'price_without_measure'})">
+                <div class="faq-item__q"><span>Замерсіз бағаны біле аламын ба?</span><span class="faq-item__arr">+</span></div>
+                <div class="faq-item__a">Алдын ала ауқымды білуге болады. Қорытынды есеп нысанның ауданын, жай-күйін және таңдалған жөндеу пакетін нақтылағаннан кейін дайындалады. Квизден өтіңіз — бағдарлық ауқымды көрсетеміз.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this);trackEvent('faq_open',{q:'price_may_grow'})">
+                <div class="faq-item__q"><span>Барысында баға өсе ме?</span><span class="faq-item__arr">+</span></div>
+                <div class="faq-item__a">Қосымша жұмыстар туындаса — олар бастамас бұрын жеке келісіледі. Негізгі шарттар смета мен шартта бекітіледі. Сіздің келісіміңізсіз жұмыс қоспаймыз.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this);trackEvent('faq_open',{q:'just_counting'})">
+                <div class="faq-item__q"><span>Бастауға дайын болмасам да, тек бюджет есептей аламын ба?</span><span class="faq-item__arr">+</span></div>
+                <div class="faq-item__a">Иә. Көпшілігі алдымен бюджет есептеп, қашан және неден бастауды түсіну үшін есептейді. Тек санап жатсаңыз — бұл қалыпты. 10 рет қоңырау шалмаймыз.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this);trackEvent('faq_open',{q:'whatsapp_only'})">
+                <div class="faq-item__q"><span>Тек WhatsApp арқылы сөйлесуге болады ма?</span><span class="faq-item__arr">+</span></div>
+                <div class="faq-item__a">Иә. Есеп, нақтылаулар және нысан бойынша коммуникацияның көп бөлігі — WhatsApp арқылы. Ыңғайлы және артық қоңырауларсыз.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this);trackEvent('faq_open',{q:'contract'})">
+                <div class="faq-item__q"><span>Шарт бойынша жұмыс жасайсыздар ма?</span><span class="faq-item__arr">+</span></div>
+                <div class="faq-item__a">Иә. Шарт пен смета жұмыс көлемін, құнын және шарттарды бекітуге көмектеседі. Бұл екі жақты да жаңылысудан қорғайды.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this);trackEvent('faq_open',{q:'turnkey'})">
+                <div class="faq-item__q"><span>Кілтке дейінгі жөндеуге не кіреді?</span><span class="faq-item__arr">+</span></div>
+                <div class="faq-item__a">Техникалық жоба, дизайн-визуализация, қара және таза жұмыстар, электрика, сантехника, кернелмелі төбелер, ламинат, қабырға бояуы, есіктер және санторапты өңдеу. Нақты құрам жеке келісіледі.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this);trackEvent('faq_open',{q:'packages'})">
+                <div class="faq-item__q"><span>Комфорт және Престиж пакеттері қалай ерекшеленеді?</span><span class="faq-item__arr">+</span></div>
+                <div class="faq-item__a">Комфорт — материалдардың базалық комплектациясымен жұмыстардың толық циклі. Престиж нақты маркаларды қамтиды: Knauf/газоблок, электрика ВВГ ГОСТ, Deniz құбырлары, Marshal бояуы, Viko, 32 кл ламинат, 60×60 керамогранит. Пакеттердің сипаттамасын жүктеп алыңыз — онда барлығы толық.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="final-cta" id="contacts">
+    <div class="media-ph final-cta__bg-ph" aria-hidden="true"></div>
+    <div class="final-cta__overlay" aria-hidden="true"></div>
+    <div class="container final-cta__container">
+        <div class="final-cta__inner">
+            <div class="final-cta__text">
+                <h2>Жөндеу бюджетін түсінгіңіз келе ме?</h2>
+                <p>Бірнеше сұраққа жауап беріңіз — нысаныңыз бойынша алдын ала есеп дайындаймыз.</p>
+                <a href="#quiz" class="btn btn--primary btn--lg"
+                   onclick="trackEvent('final_cta_click',{location:'final_cta'})">
+                    Құнын есептеу
+                </a>
+                <p class="microcopy">Сапалы, заманауи және артық мәселесіз.</p>
+            </div>
+            <div class="final-cta__form">
+                <div class="form-card">
+                    <h3>Немесе нөміріңізді қалдырыңыз — өзіміз жазамыз</h3>
+                    <form id="finalCtaForm" onsubmit="submitFinalForm(event)" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="ctaName" name="name" placeholder="Есіміңіз" autocomplete="name">
+                            <span class="form-error" id="ctaNameError">Есімді енгізіңіз</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="ctaPhone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
+                            <span class="form-error" id="ctaPhoneError">Дұрыс нөмір енгізіңіз</span>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Есепті WhatsApp-та алу
+                        </button>
+                        <p class="form-microcopy">Velora Build маманы сізбен іс жөнінде хабарласады.</p>
+                    </form>
+                    <div class="form-success" id="finalFormSuccess" style="display:none">
+                        <div class="success__icon">✅</div>
+                        <p>Өтінім қабылданды. Velora Build маманы сізбен хабарласады.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__col footer__col--brand">
+                <a href="#" class="footer__logo">
+                    <span class="logo__text-fb" style="display:flex">Velora <strong>Build</strong></span>
+                </a>
+                <p class="footer__tagline">Алматыда кілтке дейінгі жөндеу. Техникалық жоба, дизайн-визуализация, инженерлік жұмыстар және таза өңдеу.</p>
+                <div class="footer__contacts">
+                    <a href="tel:+77000000000" class="footer__link" onclick="trackEvent('phone_click',{location:'footer'})">
+                        +7 700 000 00 00
+                    </a>
+                    <a href="https://wa.me/77000000000" class="footer__link footer__wa" target="_blank"
+                       onclick="trackEvent('whatsapp_click',{location:'footer'})">
+                        WhatsApp
+                    </a>
+                </div>
+                <p class="footer__schedule">Дс–Жс: 9:00 – 20:00 · Алматы</p>
+            </div>
+            <div class="footer__col">
+                <h4>Пакеттер</h4>
+                <a href="#packages">Комфорт пакеті</a>
+                <a href="#packages">Престиж пакеті</a>
+                <a href="#packages">Кілтке дейінгі жөндеу</a>
+                <a href="#services">Барлық қызметтер</a>
+            </div>
+            <div class="footer__col">
+                <h4>Компания туралы</h4>
+                <a href="#cases">Дайын жұмыстар</a>
+                <a href="#engineering">Инженерлік жұмыстар</a>
+                <a href="#process">Кезеңдер мен төлем</a>
+                <a href="#trust">Кепілдіктер</a>
+                <a href="#reviews">Пікірлер</a>
+            </div>
+            <div class="footer__col">
+                <h4>Көмек</h4>
+                <a href="#quiz">Құнын есептеу</a>
+                <a href="#faq">Жиі қойылатын сұрақтар</a>
+                <a href="#estimate">Баға неден тұрады</a>
+                <a href="#savings">Қалай үнемдеуге болады</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__disclaimer">
+                Қорытынды есеп нысанның ауданын, жай-күйін және таңдалған жөндеу пакетін нақтылағаннан кейін дайындалады.
+            </p>
+            <p class="footer__copy">© 2024 Velora Build · Алматы</p>
+        </div>
+    </div>
+</footer>
+
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-window" id="chatWindow" style="display:none">
+        <div class="chat-win__header">
+            <div class="chat-avatar-wrap">
+                <div class="chat-avatar">VB</div>
+                <div>
+                    <div class="chat-name">Смета бойынша көмекші</div>
+                    <div class="chat-status">Velora Build</div>
+                </div>
+            </div>
+            <button class="chat-close" onclick="closeChat()" aria-label="Жабу">✕</button>
+        </div>
+        <div class="chat-win__messages" id="chatMessages"></div>
+        <div class="chat-win__quick-replies" id="chatQuickReplies">
+            <button class="chat-qr" onclick="chatQuickReply('calc')">Құнын есептеу</button>
+            <button class="chat-qr" onclick="chatQuickReply('estimate_q')">Сметаға не кіреді?</button>
+            <button class="chat-qr" onclick="chatQuickReply('timeline')">Жөндеу мерзімдері қандай?</button>
+            <button class="chat-qr" onclick="chatQuickReply('price_factors')">Бағаны не арттырады?</button>
+            <button class="chat-qr" onclick="chatQuickReply('cases_q')">Жұмыстарды қарау</button>
+        </div>
+    </div>
+    <button class="chat-btn" id="chatToggleBtn" onclick="toggleChat()" aria-label="Көмекшіні ашу">
+        <span class="chat-btn__icon">💬</span>
+        <span class="chat-btn__label">Сұрақ қою</span>
+    </button>
+</div>
+
+<div class="mobile-sticky" id="mobileStickyBar">
+    <a href="#quiz" class="sticky-btn sticky-btn--calc"
+       onclick="trackEvent('hero_cta_click',{location:'mobile_sticky'})">
+        Есептеу
+    </a>
+    <a href="https://wa.me/77000000000?text=Сәлеметсіз,%20жөндеу%20құнын%20есептегім%20келеді"
+       class="sticky-btn sticky-btn--wa" target="_blank"
+       onclick="trackEvent('whatsapp_click',{location:'mobile_sticky'})">
+        WhatsApp
+    </a>
+    <a href="tel:+77000000000" class="sticky-btn sticky-btn--call"
+       onclick="trackEvent('phone_click',{location:'mobile_sticky'})">
+        Қоңырау шалу
+    </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
